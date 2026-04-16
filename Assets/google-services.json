@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "198768968131",
+    "firebase_url": "https://artourproject-f293c-default-rtdb.firebaseio.com/",
+    "project_id": "artourproject-f293c",
+    "storage_bucket": "artourproject-f293c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:198768968131:android:a7582c4eb10a924490fd76",
+        "android_client_info": {
+          "package_name": "com.DefaultCompany.VR3D"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYRnyY_W43jYVqGYsZbFmMgu_KwS_JVvE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
