@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.XR;
 
 
 namespace TMPro.Examples
@@ -73,6 +74,14 @@ namespace TMPro.Examples
                 // If we don't have a target (assigned by the player, create a dummy in the center of the scene).
                 dummyTarget = new GameObject("Camera Target").transform;
                 CameraTarget = dummyTarget;
+            }
+
+            {
+                // Ép Unity Render ở độ phân giải gốc, không cho tự động bóp pixel
+                XRSettings.eyeTextureResolutionScale = 1.0f; 
+                UnityEngine.XR.XRSettings.renderViewportScale = 1.0f;
+                // Nếu dùng màn hình tần số quét cao, khóa cứng độ phân giải cao nhất
+                Screen.SetResolution(Screen.currentResolution.width, Screen.currentResolution.height, true);
             }
         }
 

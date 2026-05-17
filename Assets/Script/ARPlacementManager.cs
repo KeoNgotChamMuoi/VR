@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
+using UnityEngine.EventSystems;
 
 public class ARPlacementManager : MonoBehaviour
 {
@@ -17,6 +18,10 @@ public class ARPlacementManager : MonoBehaviour
 
     void Update()
     {
+        if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject())
+        {
+            return; // Thoát hàm Update luôn, nhường hoàn toàn quyền xử lý chuột cho ô Đăng Nhập
+        }
         //  Kiểm tra đầu vào (Touch cho Mobile hoặc Mouse cho PC)
         bool isPressed = false;
         Vector2 inputPosition = Vector2.zero;
