@@ -37,7 +37,6 @@ public class ARAuthManager : MonoBehaviour
             txtStatus.text = "Editor Mode: Sẵn sàng tương tác.";
         }
 #else
-        // Khi build ra thiết bị di động thật (Android/iOS) thì vẫn chạy check dependencies chuẩn chỉnh
         FirebaseApp.CheckAndFixDependenciesAsync().ContinueWith(task => {
             var dependencyStatus = task.Result;
             if (dependencyStatus == DependencyStatus.Available)
